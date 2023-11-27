@@ -1,0 +1,237 @@
+:root {
+	--portfolio-height: 65rem;
+	--portfolio-half-height: calc(var(--portfolio-height)*0.49);
+}
+
+.content::-webkit-scrollbar {
+	width: 16px;
+}
+
+.content::-webkit-scrollbar-thumb {
+	height: 56px;
+	border-radius: 8px;
+	border: 4px solid transparent;
+	background-clip: content-box;
+	background-color: hsl(0,0%,67%);
+}
+
+.fc {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.fr {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.frsa {
+	display: flex;
+  	flex-direction: row;
+	justify-content: space-around;
+}
+
+body {
+	background-color: bisque; 
+	overflow-y: hidden;
+	background-size: contain;
+	font-family: Tahoma;
+	padding: 0 5rem 0 5rem;
+}
+
+html, body, .page {
+	height: 100%;
+}
+
+.margin-top-bottom {
+	margin: 1rem 0 1rem 0;
+}
+
+input {
+	margin-top: 0.5rem;
+}
+
+.page {
+	display: flex;
+  	flex-direction: column;
+}
+
+.header {
+	flex: 0 0 auto;
+}
+
+.menu {
+	font-size: 1.2rem;
+}
+
+.menu div {
+	margin: 20px 0 20px 0;
+}
+
+.menu a {
+	text-decoration: none;
+	color: black;
+}
+
+.menu a:hover {
+	color: green;
+}
+
+.content {
+	flex: 1 1 auto;
+	position: relative;
+	overflow-y: auto;
+}
+
+.title {
+	background-color: #6E260E;
+	height: 19rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.title-text-1 {
+	color: white;
+	font-size: 2.4rem;
+	align-self: center;
+}
+
+.title-text-2 {
+	color: white;
+	font-size: 1.2rem;
+	align-self: center;
+}
+
+button {
+	padding: 0.6rem 1.5rem 0.6rem 1.5rem;
+}
+
+.chapter {
+	font-size: 1.5rem;
+	margin: 1rem 0 1rem 0;
+}
+
+.bg {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.portfolio-left {
+	height: var(--portfolio-height);
+	width: 33%;
+}
+
+.portfolio-left-top {
+	height: var(--portfolio-half-height);
+	background-color: #6E260E;
+}
+
+.portfolio-left-bottom {
+	height: var(--portfolio-half-height);
+	background-color: #6E260E;
+}
+
+.portfolio-center {
+	height: var(--portfolio-height);
+	width: 33%;
+	background-color: #6E260E;
+}
+
+.portfolio-right {
+	height: var(--portfolio-height);
+	width: 33%;
+}
+
+.portfolio-right-top {
+	height: var(--portfolio-half-height);
+	background-color: #6E260E;
+}
+
+.portfolio-right-bottom {
+	height: var(--portfolio-half-height);
+	background-color: #6E260E;
+}
+
+.prices-pic-left {
+	height: 60rem;
+	width: 33%;
+	background-color: #6E260E;
+}
+
+.prices-pic-center {
+	height: 60rem;
+	width: 33%;
+	background-color: #6E260E;
+}
+
+.prices-pic-right {
+	height: 60rem;
+	width: 33%;
+	background-color: #6E260E;
+}
+
+.fg1 {
+	flex-grow: 1;
+}
+
+.fg2 {
+	flex-grow: 2;
+}
+
+.about-me-pic {
+	background-color: #6E260E;
+	width: 13%;
+}
+
+.tc {
+	text-align: center;
+}
+
+.book-a-shoot {
+	height: 32rem;
+}
+
+.book-a-shoot-pic {
+	background-color: #6E260E;
+	width: 25%;
+}
+
+.db {
+	display: block;
+}
+
+.form-request {
+	display: block;
+	width: 30rem;
+	border-width: 1px;
+	border-color: #6E260E;
+	border-style: dashed;
+	border-radius: 5%;
+	padding: 5%;
+}
+
+.footer{
+	background-color: #6E260E;
+	height: 20rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.footer a {
+	text-decoration: none;
+	color: white;
+}
+
+.footer img {
+	vertical-align: middle;
+	margin-right: 1rem;
+}
+
+.mobile-page {
+	display: none;
+}

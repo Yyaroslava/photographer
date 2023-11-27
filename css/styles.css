@@ -1,0 +1,258 @@
+:root {
+	--portfolio-height: 65rem;
+	--portfolio-half-height: calc(var(--portfolio-height)*0.49);
+}
+
+.content::-webkit-scrollbar {
+	width: 16px;
+}
+
+.content::-webkit-scrollbar-thumb {
+	height: 56px;
+	border-radius: 8px;
+	border: 4px solid transparent;
+	background-clip: content-box;
+	background-color: hsl(0,0%,67%);
+}
+
+.sa {
+	justify-content: space-around;
+}
+
+.sb {
+	justify-content: space-between;
+}
+
+.fc {
+	display: flex;
+	flex-direction: column;
+}
+
+.fr {
+	display: flex;
+	flex-direction: row;
+}
+
+.aic {
+	align-items: center;
+}
+
+body {
+	background-color: bisque; 
+	overflow-y: hidden;
+	background-size: contain;
+	font-family: Tahoma;
+	padding: 0 5rem 0 5rem;
+}
+
+html, body, .page {
+	height: 100%;
+}
+
+.margin-top-bottom {
+	margin: 1rem 0 1rem 0;
+}
+
+input {
+	margin-top: 0.5rem;
+}
+
+.page {
+	display: flex;
+  	flex-direction: column;
+}
+
+.m-page {
+	display: none;
+}
+
+.header {
+	flex: 0 0 auto;
+}
+
+.menu {
+	font-size: 1.2rem;
+}
+
+.menu div {
+	margin: 20px 0 20px 0;
+}
+
+.menu a {
+	text-decoration: none;
+	color: black;
+}
+
+.menu a:hover {
+	color: rgb(0, 82, 0);
+}
+
+.content {
+	flex: 1 1 auto;
+	position: relative;
+	overflow-y: auto;
+}
+
+.title {
+	background-image: url("../img/header.png");
+	height: 19rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.title-text-1 {
+	color: white;
+	font-size: 2.4rem;
+	align-self: center;
+}
+
+.title-text-2 {
+	color: white;
+	font-size: 1.2rem;
+	align-self: center;
+}
+
+button {
+	padding: 0.6rem 1.5rem 0.6rem 1.5rem;
+	background-color: antiquewhite;
+	border-radius: 5px;
+}
+
+button:hover {
+	background-color:peru;
+	border-color: brown;
+	transition: 0.5s;
+}
+
+.chapter {
+	font-size: 1.5rem;
+	margin: 1rem 0 1rem 0;
+}
+
+.bg {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.portfolio-left {
+	height: var(--portfolio-height);
+	width: 33%;
+}
+
+.portfolio-left-top {
+	height: var(--portfolio-half-height);
+	background-image: url("../img/2.png");
+}
+
+.portfolio-left-bottom {
+	height: var(--portfolio-half-height);
+	background-image: url("../img/3.png");
+}
+
+.portfolio-center {
+	height: var(--portfolio-height);
+	width: 33%;
+	background-image: url("../img/4.png");
+}
+
+.portfolio-right {
+	height: var(--portfolio-height);
+	width: 33%;
+}
+
+.portfolio-right-top {
+	height: var(--portfolio-half-height);
+	background-image: url("../img/5.png");
+}
+
+.portfolio-right-bottom {
+	height: var(--portfolio-half-height);
+	background-image: url("../img/6.png");
+}
+
+.prices-pic-left {
+	height: 60rem;
+	width: 33%;
+	background-image: url("../img/7.png");
+}
+
+.prices-pic-center {
+	height: 60rem;
+	width: 33%;
+	background-image: url("../img/8.png");
+}
+
+.prices-pic-right {
+	height: 60rem;
+	width: 33%;
+	background-image: url("../img/9.png");
+}
+
+.fg1 {
+	flex-grow: 1;
+}
+
+.fg2 {
+	flex-grow: 2;
+}
+
+.about-me-pic {
+	background-image: url("../img/10.png");
+	width: 13%;
+}
+
+.tc {
+	text-align: center;
+}
+
+.tr {
+	text-align: right;
+}
+
+.book-a-shoot {
+	height: 30rem;
+}
+
+.book-a-shoot-pic {
+	background-image: url("../img/11.png");
+	width: 25%;
+}
+
+.db {
+	display: block;
+}
+
+.form-request {
+	display: block;
+	width: 30rem;
+	border-width: 1px;
+	border-color: brown;
+	border-style: dashed;
+	border-radius: 5%;
+	padding: 5%;
+}
+
+.footer {
+	background-image: url("../img/footer.png");
+	height: 20rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.footer a {
+	text-decoration: none;
+	color: white;
+}
+
+.footer img {
+	vertical-align: middle;
+	margin-right: 1rem;
+}
+
+.mobile-page {
+	display: none;
+}
+
