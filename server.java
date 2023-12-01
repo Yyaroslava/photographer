@@ -13,13 +13,13 @@ import java.util.Map;
 
 public class server {
 	public static void main(String[] args) throws IOException {
-		HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
+		HttpServer server = HttpServer.create(new InetSocketAddress(80), 0);
 
 		server.createContext("/", new MyHandler());
 
 		server.setExecutor(null); // default executor
 		server.start();
-		System.out.println("Server is running on port 8080");
+		System.out.println("Server is running on port 80");
 	}
 
 	static class MyHandler implements HttpHandler {
