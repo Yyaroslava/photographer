@@ -11,7 +11,25 @@ import java.net.InetSocketAddress;
 import java.util.HashMap;
 import java.util.Map;
 
-public class server {
+import io.prometheus.client.Counter;
+import io.prometheus.client.Histogram;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class Photographer {
+	
+	static final Counter requests = Counter.build()
+			.name("requests_total")
+			.help("Total requests.")
+			.register();
+
+	static final Histogram requestDuration = Histogram.build()
+			.name("requests_duration_seconds")
+			.help("Request duration in seconds.")
+			.register();
+
 	public static void main(String[] args) throws IOException {
 		HttpServer server = HttpServer.create(new InetSocketAddress(80), 0);
 
@@ -65,15 +83,24 @@ public class server {
 
 		@Override
 		public void handle(HttpExchange t) throws IOException {
-			String path = t.getRequestURI().getPath();
-			System.out.println(path);
-			if(map.containsKey(path)) {
-				servFile(t, map.get(path));
-			} 	
-			else {
-				System.out.printf("path not found [%s] \n", path);
-			}
+			// Increment the counter
+			requests.inc();
 
+			// Measure the duration of the code block
+			Histogram.Timer requestTimer = requestDuration.startTimer();
+			try {
+				String path = t.getRequestURI().getPath();
+				System.out.println(path);
+				if(map.containsKey(path)) {
+					servFile(t, map.get(path));
+				} 	
+				else {
+					System.out.printf("path not found [%s] \n", path);
+				}
+			} finally {
+				// Stop the timer when done
+				requestTimer.observeDuration();
+			}
 		}
 
 		public void servFile(HttpExchange t, String filePath) throws IOException {
